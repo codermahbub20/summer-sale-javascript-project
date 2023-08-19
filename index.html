@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Sale</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="hero min-h-[550px] bg-[#F9F6E2]">
+            <div class="hero-content flex-col sm:ml-0 md:mr-0 lg:ml-10  lg:flex-row-reverse">
+                <img src="./images/Summer 1.png" class="lg:max-w-sm rounded-lg shadow-2xl" />
+                <div class="sm:mr-0 md:mr-0 lg:mr-10">
+                    <h5 class="text-3xl">---SALE FEVER---</h5>
+                    <h4 class="text-4xl font-bold">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20%
+                            off</span></h4>
+                    <div class="flex mt-4">
+                        <p class="mt-3 text-2xl">Use Promo Code</p>
+                        <button class="btn text-2xl text-white bg-[#E527B2] hover:bg-red-500 ml-2 mt-2">SELL20</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="w-9/12 mx-auto mt-4  lg:flex flex-1">
+            <div class="w-3/4">
+                <!--sub div 1 -->
+                <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+                    <!-- card 1 -->
+                    <div onclick="handleClick1(this)" class="card w-[250px]  bg-white shadow-2xl">
+                        <figure class="px-10 w-3/4 mx-auto bg-slate-500 rounded-xl mt-5 p-10">
+                            <img src="./images/prod4.png" alt="Shoes" class="rounded-xl w-[120px] h-[120px] m-auto" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 id="text1" class="card-title text-xl font-semibold">Sports Back Cap</h2>
+                            <h6 class="text-xl"><span id="cap-price">49.00</span> TK</h6>
+                        </div>
+                    </div>
+                    <!-- card 2 -->
+                    <div onclick="handleClick2(this)" class="card w-[250px]  bg-white shadow-2xl">
+                        <figure class="px-10 w-3/4 mx-auto bg-slate-500 rounded-xl mt-5 p-10">
+                            <img src="./images/prod5.png" alt="Shoes" class="rounded-xl w-[120px] h-[120px] m-auto" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 id="text2" class="card-title text-xl font-semibold">Full Jersey Set</h2>
+                            <p class="text-xl"><span id="jersey-prize">69.00</span> TK</p>
+                        </div>
+                    </div>
+                    <!-- card 3 -->
+                    <div onclick="handleClick3(this)" class="card w-[250px]  bg-white shadow-2xl">
+                        <figure class="px-10 w-3/4 mx-auto bg-slate-500 rounded-xl mt-5 p-10">
+                            <img src="./images/prod6.png" alt="Shoes" class="rounded-xl w-[120px] h-[120px] m-auto" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 id="text3" class="card-title text-xl font-semibold">Sports cates</h2>
+                            <p class="text-xl"><span id="cates-prize">159.00</span> TK</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- sub div 2 -->
+                <div>
+
+                </div>
+
+            </div>
+
+            <div class="w-1/4  shadow-2xl">
+                <div class="bg-white shadow-lg p-5 rounded-lg mt-2">
+                    <h2 class="text-2xl font-semibold">Have coupon?</h2>
+                <div>
+                    <input placeholder="coupon code" class="border bg-none py-3 w-28 px-2" type="text">
+                    <button id="apply-btn" class="bg-[#E527B2] px-4 rounded text-xl  text-white py-2">Apply</button>
+                </div>
+                </div>
+
+                <div id="selected-items" class=" text-xl mt-5 bg-white shadow-lg">
+
+                </div>
+                <div class="mt-20 bg-white rounded shadow-lg text-2xl pl-5">
+                    <h1>Total Prize : <span id="all-total">00</span> Taka </h1>
+                    <h1>Discount Prize : </h1>
+                    <h1>Total: </h1>
+                </div>
+                <button class="w-3/4 bg-[#E527B2] text-white font-bold mt-10 px-5 py-3 ml-9">Make Purchase</button>
+            </div>
+
+
+        </section>
+    </main>
+
+    <script src="./JavaScript/sale.js"></script>
+</body>
+
+</html>

@@ -32,6 +32,8 @@
     <main>
         <section class="w-9/12 mx-auto mt-4  lg:flex flex-1">
             <div class="w-3/4">
+                <h1 class="text-4xl font-semibold mb-6">SportsWear</h1>
+
                 <!--sub div 1 -->
                 <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
                     <!-- card 1 -->
@@ -52,7 +54,7 @@
                         </div>
                     </div>
                     <!-- card 2 -->
-                    <div onclick="handleClick2(this)" class="card w-[250px]  bg-white shadow-2xl">
+                    <div onclick="handleClick2()" class="card w-[250px] md:ml-24 lg:ml-0  bg-white shadow-2xl">
                         <figure class="px-10 w-3/4 mx-auto bg-slate-500 rounded-xl mt-5 p-10">
                             <img src="./images/prod5.png" alt="Shoes" class="rounded-xl w-[120px] h-[120px] m-auto" />
                         </figure>
@@ -69,7 +71,7 @@
                         </div>
                     </div>
                     <!-- card 3 -->
-                    <div onclick="handleClick3(this)" class="card w-[250px]  bg-white shadow-2xl">
+                    <div onclick="handleClick3()" class="card w-[250px] md:mt-4 lg:mt-0  bg-white shadow-2xl">
                         <figure class="px-10 w-3/4 mx-auto bg-slate-500 rounded-xl mt-5 p-10">
                             <img src="./images/prod6.png" alt="Shoes" class="rounded-xl w-[120px] h-[120px] m-auto" />
                         </figure>
@@ -89,30 +91,102 @@
                 </div>
 
                 <!-- sub div 2 -->
-                <div>
+                <h1 class="text-4xl font-semibold mt-6">Furniture</h1>
+                <div class="mt-10 mb-4 grid sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-3">
+
+                    <!-- sub card 1 -->
+                    <div onclick="handleClick4()" class="card w-[250px]  bg-white shadow-2xl">
+                        <figure class="px-10 w-3/4 mx-auto bg-slate-500 rounded-xl mt-5 p-10">
+                            <img src="./images/prod7.png" alt="Shoes" class="rounded-xl w-[120px] h-[120px] m-auto" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 id="text4" class="card-title text-xl font-semibold">Single Relax Chair</h2>
+                            <p class="text-xl"><span id="chair-prize">185.00</span> TK</p>
+                        </div>
+                    </div>
+                    <!-- sub card 1 -->
+                    <div onclick="handleClick5()" class="card w-[250px] sm:ml-0 md:ml-24 lg:ml-0  bg-white shadow-2xl">
+
+                        <figure class="px-10 w-3/4 mx-auto bg-slate-500 rounded-xl mt-5 p-10">
+                            <img src="./images/prod8.png" alt="Shoes" class="rounded-xl w-[120px] h-[120px] m-auto" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 id="text5" class="card-title text-xl font-semibold">Children play</h2>
+                            <p class="text-xl"><span id="children-prize">299.00</span> TK</p>
+                        </div>
+                    </div>
+                    <!-- sub card 1 -->
+                    <div onclick="handleClick6()" class="card w-[250px] md:mt-4 lg:mt-0  bg-white shadow-2xl">
+                        <figure class="px-10 w-3/4 mx-auto bg-slate-500 rounded-xl mt-5 p-10">
+                            <img src="./images/prod9.png" alt="Shoes" class="rounded-xl w-[120px] h-[120px] m-auto" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 id="text6" class="card-title text-xl font-semibold">Flexible Sofa</h2>
+                            <p class="text-xl"><span id="sofa-prize">339.00</span> TK</p>
+                        </div>
+                    </div>
+
+
 
                 </div>
-
             </div>
 
-            <div class="w-1/4  shadow-2xl">
+            <div class="sm:w-1/4 md:w-full lg:w-1/4  shadow-2xl">
                 <div class="bg-white shadow-lg p-5 rounded-lg mt-2">
                     <h2 class="text-2xl font-semibold">Have coupon?</h2>
-                <div>
-                    <input placeholder="coupon code" class="border bg-none py-3 w-28 px-2" type="text">
-                    <button id="apply-btn" class="bg-[#E527B2] px-4 rounded text-xl  text-white py-2">Apply</button>
-                </div>
+                    <div class="">
+                        <input id="input-field" placeholder="coupon code" class="border bg-none py-3 w-28 px-2"
+                            type="text">
+                        <button id="apply-btn" class="bg-[#E527B2] px-4 rounded text-xl  text-white py-2">Apply</button>
+                    </div>
                 </div>
 
                 <div id="selected-items" class=" text-xl mt-5 bg-white shadow-lg">
 
                 </div>
-                <div class="mt-20 bg-white rounded shadow-lg text-2xl pl-5">
+                <div class="mt-20  bg-white rounded shadow-lg text-2xl pl-5">
                     <h1>Total Prize : <span id="all-total">00</span> Taka </h1>
-                    <h1>Discount Prize : </h1>
-                    <h1>Total: </h1>
+                    <h1>Discount Prize :<span id="discount-amount">00</span></h1>
+                    <h1>Total: <span id="final-total">00</span> </h1>
                 </div>
-                <button class="w-3/4 bg-[#E527B2] text-white font-bold mt-10 px-5 py-3 ml-9">Make Purchase</button>
+                
+                <div>
+                     <!-- Open the modal using ID.showModal() method -->
+                     <button class="btn btn-primary w-3/4 bg-[#E527B2] text-white font-bold mt-10 px-5 py-3 ml-9" onclick="my_modal_1.showModal()">Make Purchase</button>
+                     <dialog id="my_modal_1" class="modal justify-center ">
+                         <form method="dialog" class="modal-box ">
+                             <img src="./images/congo.png" alt="">
+                             <h3 class="font-bold text-lg">Congratulations</h3>
+                             <p class="py-4">Your Purchase the product</p>
+                             <div class="modal-action justify-center">
+                                 <!-- if there is a button in form, it will close the modal -->
+                                 <button class="btn bg-[#E527B2] text-white">Close</button>
+                             </div>
+                         </form>
+                     </dialog>
+                </div>
+            
             </div>
 
 

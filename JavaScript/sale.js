@@ -6,6 +6,8 @@ let childrenPlay1 = 0;
 let flexibleSofa = 0;
 let discount = 0;
 
+const submitBtn = document.getElementById('apply-btn');
+
 
 
 function handleClick1() {
@@ -29,7 +31,7 @@ function handleClick1() {
     const allTotal = parseFloat(allTotalString);
 
     allTotalId.innerText = sportsCapPrize + sportsCatesPrize + sportsJerseyPrize + chairPrize1 + childrenPlay1 + flexibleSofa;
-    // clickToClick();
+    
 }
 
 function handleClick2() {
@@ -53,7 +55,7 @@ function handleClick2() {
     const allTotal = parseFloat(allTotalString);
 
     allTotalId.innerText = sportsJerseyPrize + sportsCatesPrize + sportsCapPrize + chairPrize1 + childrenPlay1 + flexibleSofa;
-    // clickToClick();
+    
 }
 
 
@@ -76,6 +78,7 @@ function handleClick3() {
     const allTotalId = document.getElementById('all-total');
     const allTotalString = parseFloat(allTotalId.innerText);
     allTotalId.innerText = sportsCatesPrize + sportsJerseyPrize + sportsCapPrize + chairPrize1 + childrenPlay1 + flexibleSofa;
+
 }
 
 function handleClick4() {
@@ -96,6 +99,7 @@ function handleClick4() {
     const allTotalId = document.getElementById('all-total');
     const allTotalString = parseFloat(allTotalId.innerText);
     allTotalId.innerText = sportsCatesPrize + sportsJerseyPrize + sportsCapPrize + chairPrize1 + childrenPlay1 + flexibleSofa;
+
 }
 
 function handleClick5() {
@@ -116,6 +120,12 @@ function handleClick5() {
     const allTotalId = document.getElementById('all-total');
     const allTotalString = parseFloat(allTotalId.innerText);
     allTotalId.innerText = sportsCatesPrize + sportsJerseyPrize + sportsCapPrize + chairPrize1 + childrenPlay1 + flexibleSofa;
+
+    if(allTotalId.innerText >= 200){
+        submitBtn.disabled = false;
+    }else{
+        submitBtn.disabled = true;
+    }
 }
 
 
@@ -137,9 +147,14 @@ function handleClick6() {
     const allTotalId = document.getElementById('all-total');
     const allTotalString = parseFloat(allTotalId.innerText);
     allTotalId.innerText = sportsCatesPrize + sportsJerseyPrize + sportsCapPrize + chairPrize1 + childrenPlay1 + flexibleSofa;
+
+    if(allTotalId.innerText >= 200){
+        submitBtn.disabled = false;
+    }else{
+        submitBtn.disabled = true;
+    }
+   
 }
-
-
 
 
 
@@ -155,6 +170,8 @@ document.getElementById('apply-btn').addEventListener('click', function () {
     const discountMoneyTotal = document.getElementById('discount-amount');
     const allTotalMoney = document.getElementById('all-total');
     const finalTotalPrize = document.getElementById('final-total');
+
+    
 
     if (inputFieldText == 'SELL20') {
         if (!discountApplied) {
@@ -176,8 +193,22 @@ document.getElementById('apply-btn').addEventListener('click', function () {
     }
 
     inputField.value = '';
-
 });
+
+
+    document.getElementById('go-home').addEventListener('click',function(){
+        const totalPrizeMoney = document.getElementById('all-total');
+        const allDiscountMoney = document.getElementById('discount-amount');
+        const allFinalMoney = document.getElementById('final-total');
+
+        totalPrizeMoney.innerText = '00';
+        allDiscountMoney.innerText  = '00';
+        allFinalMoney.innerText = '00';
+    })
+
+
+
+
 
 
 
